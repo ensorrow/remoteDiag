@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #00B7FF;
+  padding: 30px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#tags{
+  display: flex;
+  margin-bottom: 20px;
+}
+#tags li{
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+  background-color: cadetblue;
+}
+#tags li.active{
+  background-color: brown;
+}
+
+#echart>div.active {
+  /* visibility: visible; */
+  display: block;
+}
+
+#echart {
+  background-color: #fff;
+  float: left;
+  position: relative;
+  height: 480px;
+  width: 800px;
+  text-align: center;
+  max-width: 100%;
+  overflow: auto;
+}
+#echart>div{
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  /* visibility: hidden; */
+  display: none;
+  height: 420px;
+}
+#echart img{
+  /* max-width: 100%; */
+  margin-top: 30px;
+}
+#error {
+  margin-left: 810px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  height: 400px;
+  overflow: auto;
+  padding: 10px;
+}
+#error h3{
+  margin: 10px 0;
+}
+#errorWra li{
+  padding: 10px;
+  background-color: crimson;
+  color: white;
+  margin: 10px 0;
+}
+#errorWra li:first-child{
+  background-color: #00B7FF;
+}
+#diagWra {
+  margin-left: 810px;
+  margin-right: 10px;
+  background-color: #fff;
+  display: flex;
+}
+#diagWra li{
+  flex: 1;
+  padding-top: 40px;
+  text-align: center;
+  position: relative;
+}
+#diagWra li::before{
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -10px;
+  background-color: green;
+}
+#diagWra li.active::before{
+  background-color: red;
+}
+#modal{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background: #f2f2f2;
+}
+#modal h3{
+  background-color: #eee;
+  padding: 26px;
+}
+#modal .content{
+  margin: 0 26px;
+  border-top: 1px solid #ccc;
+  padding: 26px 0;
+}
+#modal button{
+  padding: 6px 16px;
+  background-color: #00B7FF;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  margin: 6px;
+}
+.hide{
+  display: none;
+}
+
+@media screen and (max-width: 1000px){
+  #echart{
+    float: none;
+    width: 100%;
+  }
+  #diagWra {
+    margin: 20px 0;
+  }
+  #error{
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #modal{
+    width: 100%;
+  }
+}

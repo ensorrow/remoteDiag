@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      h1 压缩机远程诊断系统
+      h2#stat 已选机组：1#
+    block content
+    #modal
+      h3 请选择要监测的机组
+      .content
+        button 1#
+        button 2#
+        button 3#
+  script(src="/javascripts/echarts.common.min.js")
+  script(src="/javascripts/socket.slim.js")  
+  script(src="/javascripts/myecharts.js")

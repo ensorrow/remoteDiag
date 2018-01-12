@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  ul#tags
+    li.active 实时数据
+    li 时域波形
+    li 频域波形
+    li 轴心轨迹图
+  #echart
+    #echartWra.active
+    #sy
+      img(src="/images/shiyu.jpg", alt="时域图")
+    #hz
+      img(src="/images/pinyu.jpg", alt="频域图")
+    #trend
+      img(src="/images/guiji.png", alt="轴心轨迹图")
+  #error
+    h3 故障记录
+    ul#errorWra
+  ul#diagWra
+    li 正常
+    li 故障类型1
+    li 故障类型2
+    li 故障类型3
+    li 故障类型4
